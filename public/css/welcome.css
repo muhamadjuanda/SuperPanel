@@ -1,0 +1,247 @@
+/* ========================
+   Base Utilities & Helpers
+=========================== */
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.bi {
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
+/* ========================
+   Custom Button Theme
+=========================== */
+.btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+}
+
+/* ========================
+   Layout Structure
+=========================== */
+.app-layout {
+    min-height: 100vh;
+    position: relative;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+.content-card {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* ========================
+   Header & Branding
+=========================== */
+.app-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1.5rem;
+}
+
+.app-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.app-brand:hover {
+    opacity: 0.8;
+    color: inherit;
+}
+
+.app-logo {
+    width: 36px;
+    height: 36px;
+    background: #712cf9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.45rem;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.app-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ========================
+   Buttons (Shared Styles)
+=========================== */
+.btn-custom {
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    min-width: 120px;
+}
+
+.btn-primary {
+    background-color: #712cf9;
+    border-color: #712cf9;
+}
+
+.btn-primary:hover {
+    background-color: #6528e0;
+    border-color: #6528e0;
+}
+
+.btn-primary:active,
+.btn-primary:focus:active {
+    background-color: #5a23c8 !important;
+    border-color: #5a23c8 !important;
+    color: #fff;
+}
+
+.btn-group-custom {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ========================
+   Forms (Login & Register)
+=========================== */
+.form-signin,
+.form-auth {
+    max-width: 330px;
+    padding: 1rem;
+    margin: auto;
+}
+
+.form-signin .form-floating:focus-within,
+.form-auth .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input,
+.form-auth input {
+    margin-bottom: -1px;
+    border-radius: 0;
+}
+
+.invalid-feedback {
+    text-align: left !important;
+}
+
+/* ========================
+   Welcome Page
+=========================== */
+.welcome-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--bs-body-color);
+}
+
+.welcome-content .lead {
+    font-size: 1.1rem;
+    color: var(--bs-secondary-color);
+    margin-bottom: 2rem;
+}
+
+.ios-typing {
+    font-size: 2.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInSlide 1s ease-out forwards;
+}
+
+@keyframes fadeInSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================
+   Mode Toggle
+=========================== */
+.bd-mode-toggle {
+    z-index: 1500;
+}
+
+.bd-mode-toggle .bi {
+    width: 1em;
+    height: 1em;
+}
+
+.bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+}
+
+/* ========================
+   Responsive Media Queries
+=========================== */
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .app-header {
+        padding: 1rem;
+    }
+
+    .app-name {
+        font-size: 1.1rem;
+    }
+
+    .welcome-content h1,
+    .login-content h1,
+    .form-auth h1 {
+        font-size: 1.75rem;
+    }
+
+    .btn-group-custom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-custom,
+    .btn-signin,
+    .btn-auth {
+        width: 100%;
+        max-width: 200px;
+    }
+}
